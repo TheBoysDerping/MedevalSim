@@ -188,8 +188,9 @@ while dragonhp >= 0 and dragonhp != 0:
 	print(f"The dragon now has {dragonhp} health")
 	print("You took 3 damage from the dragon")
 	chosenhp -= 3
-	print(f"Your pet {Chosenpet} did 10 damage to the dragon")
-	dragonhp -= 10
+	if Chosenpet not in nopet:
+		print(f"Your pet {Chosenpet} did 10 damage to the dragon")
+		dragonhp -= 10
 	print(f"you have {chosenhp} left")
 	if chosenhp <= 0:
 		print("You died")
